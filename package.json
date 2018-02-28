@@ -1,0 +1,22 @@
+{
+  "name": "capstonewinter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "affiong bassey",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.16.0",
+    "jsonwebtoken": "^7.1.9",
+    "lodash": "^4.17.5",
+    "mongodb": "^2.2.5",
+    "mongoose": "^5.0.4",
+    "validator": "^9.4.1"
+  }
+}
