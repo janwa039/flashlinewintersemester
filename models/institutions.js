@@ -10,30 +10,25 @@ var institutionSchema=new mongoose.Schema({
     },
     buildings:[{
         name:String,
+        ticketNumber:{
+          type:Number,
+          default:99
+        },
         currentNumber:Number,
-        servingNumber:Number
-       }]
+        servingNumber:Number,
+        ticket:[{
+        type:Number,
+        user:String,
+      }]
+    }]
 });
-institutionSchema.statics.findByInstitution=function(institution, building){
 
-  var Institution=this;
-  return user.findOne({institution:institution,building:building}).then((currentNumber)=>{
-        if(currentNumber){
-          return currentNumber;
-        }
-        else{
-          return Promise.reject();
-        }
-  });
 
-  institution.update({institution:institution,
-    building:building}, {$inc:{currentNumber:1}},function(result,err){
-    if(err){
-      return console.log(err);
-    }
-  });
-};
-
+// institutionSchema.methods.currentNumberMethod=function(idinstitution, idbuilding){
+//   institutionSchema.findOne({idinstitution:idinstitution, idbuilding:idbuilding}).then((information)=>{
+//          console.log(information);
+//   })
+// }
 
 var institution=mongoose.model('Institutioncollection', institutionSchema);
 
